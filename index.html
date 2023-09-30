@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="navbar dark-mode" role="navigation">
+            <div class="navbar__logo">Logo</div>    
+            <ul class="navbar__links">
+            <li class="navbar__link first"><a href="index.html">Accueil</a></li>
+            <li class="navbar__link third"><a href="CV.html">CV</a></li>
+            <li class="navbar__link four"><a href="portfolio.html">Portfolio</a></li>
+            <li class="navbar__link fifth"><a href="contact.html">Contact</a></li>
+            </ul>   
+            <button class="burger">
+            <span class="bar"></span>  
+            </button>   
+        </nav>
+    </header>
+    <h1>Bienvenue</h1>
+    <main>
+        
+        <img src="CVaccueil-removebg-preview.png" alt="#">
+        <div class="card1">
+            <div class="card1-inner">
+              <div class="card1-front">
+                <h2>Développeur Web Junior</h2>
+                <p>(Placer votre souris ici pour faire pivoter)</p>
+              </div>
+              <div class="card1-back">
+                <h3>Bienvenue :</h3><br>
+                <p>Bienvenue sur mon Site portfolio. En pleine formation web à l'Institut de Formation de la Réunion, je suis en quête d'une opportunité de stage passionnante dans ce domaine en ce moment. Bonne visite à vous.</p>
+              </div>
+            </div>
+        </div>
+          
+    </main>
+        
+    <footer>
+      <div class="footer__content">
+        <div class="footer__section">
+            <h2>Liens Utiles</h2>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="CV.html">CV</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+        <p class="footer__copyright">&copy; 2023 BRENNUS Keiran - Tous droits réservés</p>
+        <div class="footer__section">
+            <h2>Contact</h2>
+            <address>
+                <p>Votre nom</p>
+                <p>Votre adresse</p>
+                <p>Votre numéro de téléphone</p>
+                <p><a href="mailto:votre@email.com">Votre adresse e-mail</a></p>
+            </address>
+        </div>
+        
+        <!-- <div class="footer__section">
+            <h2>Réseaux Sociaux</h2>
+            <ul>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">LinkedIn</a></li>
+            </ul>
+        </div> -->
+    </div>
+    </footer>
+    
+   
+</body>
+</html>
+<script>
+    function toggleMenu () {  
+  const navbar = document.querySelector('.navbar');
+  const burger = document.querySelector('.burger');
+  
+  burger.addEventListener('click', (e) => {    
+    navbar.classList.toggle('show-nav');
+  });    
+  // bonus
+  const navbarLinks = document.querySelectorAll('.navbar a');
+  navbarLinks.forEach(link => {
+    link.addEventListener('click', (e) => {    
+      navbar.classList.toggle('show-nav');
+    }); 
+  })
+   
+}
+toggleMenu();
+</script>

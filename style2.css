@@ -1,0 +1,521 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* Variables */
+:root {
+  --font-size:1rem;
+}
+.light-mode {
+  --navbar-color: #222;
+  --navbar-bg-color: #F0F0F0;  
+}
+.dark-mode {
+  --navbar-color: #FFF;
+  --navbar-bg-color: #000;  
+}
+
+/* Reset */
+* {
+  box-sizing:border-box; 
+  outline:none;
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style:none;
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin:0;
+    font-size:var(--font-size);
+    font-family: 'Poppins', sans-serif;
+    background-color:white;
+    /* overflow: hidden; */
+}
+header {
+    height: 6.5%;
+}
+h1 {
+    text-align: center;
+    background: linear-gradient(134deg, #837B7B 0%, rgba(255, 248, 248, 0.00) 100%);
+
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(134deg, #837B7B 0%, rgba(255, 248, 248, 0.00) 100%);
+
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(-200px);
+    transition: 1s ease-in;
+}
+/* debut footer */
+footer {
+    height: 10%;
+    text-align: center;
+    color: white;
+    background-color: #000;
+    font-size: 1vh;
+    letter-spacing: 1px;
+    display: flex;
+}
+
+h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 0.01em;
+    text-underline-offset: 2px;
+}
+
+.footer__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+/* Ajoutez cette règle pour supprimer le soulignement des liens dans le footer */
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: rgb(233, 137, 41);
+}
+/* fin de footer */
+/* Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 1.1rem;
+    background: var(--navbar-bg-color);
+    color: var(--navbar-color);
+    border-bottom: #F0F0F0 1px solid;
+    height: 100%;
+}
+
+.navbar__links {
+    display: flex;
+}
+
+.navbar__link {
+    padding: 0 10px;
+}
+
+.navbar__link>a {
+    color: var(--navbar-color);
+    text-decoration: none;
+}
+
+.burger {
+    display: none;
+}
+/* début cv */
+body{
+    background: #ededed;
+}
+p{
+    font-size: 1em;
+    line-height: 1.5em;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+/*HEADER & FOOTER*/
+.entete, .pied{
+    width: 100%;
+    padding: 20px 0px;
+    background: url("https://www.pierre-giraud.com/wp-content/uploads/2019/07/cv-cover.jpg") #4f4f4f;
+    box-shadow: 0px 0px 15px #333;
+}
+.entete{
+    border-bottom: 2px solid #fff;
+    height: 120px;
+}
+.entete h1{
+    color: white;
+    font-size: 1.5em;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.pied{
+    border-top: 2px solid #fff;
+}
+.pied p{
+    width: 90%;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+}
+.pied a{
+    color: #fff;
+}
+
+/*SECTIONS*/
+section{
+    display: flex; 
+    flex-flow: row wrap;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: 20px;
+    margin: 20px auto;
+    box-shadow: 0px 0px 10px #bbb;
+    background-color: #fff;
+}
+
+section h2{
+    margin: 20px 0;
+    width: 90%;
+}
+section > div{
+    width: 90%;
+}
+
+/*SECTION INFOS*/
+.photo{
+    text-align: center;
+}
+.photo img{
+    width: 200px;
+    height: 260px;
+    border: 3px solid #fff;
+    box-shadow: 0px 0px 10px #777;
+    border-radius: 50%;
+    margin-top: -80px;
+}
+.prez{
+    border-bottom: 2px dashed #ccc;
+}
+.prez a{
+    display: block;
+    text-align: center;
+    padding: 10px;
+    margin: 10px auto 30px auto;
+    color: #fff;
+    background-color: #EA0;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 5px;
+}
+.contact-flex{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+.contact-flex p:first-child{
+    flex: 0 0 40%;
+}
+.contact-flex p:last-child{
+    flex: 0 0 60%;
+}
+.social{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px auto 0px auto;
+}
+.social img{
+    width: 40px;
+    height: 40px;
+}
+
+/*SECTION EXP ET FORMATION*/
+.exp{
+    display: flex;
+    flex-flow: row wrap;
+    border-bottom: 1px solid #bbb;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.exp-info{
+    display: flex;
+    flex-flow: column wrap;
+}
+.exp-logo{
+    flex: 0 0 25%;
+    max-width: 100px;
+}
+.exp-info{
+    flex: 0 0 70%;
+    margin-left: auto;
+}
+.exp img{
+    width: 100%;
+}
+.exp h3{
+    font-size:  1.2em;
+}
+.exp h4{
+    font-size:  1em;
+    font-weight: normal;
+}
+
+/*SECTION COMPETENCES*/
+.h3gauche{
+    width: 90%;
+}
+.comp{
+    display:flex;
+    flex-flow: row wrap;
+    margin-bottom: 10px;
+}
+.comp p{
+    flex: 0 0 40%;
+}
+.conteneur-barre{
+    flex: 0 0 60%;
+    border-radius: 5px;
+    background-color: grey;
+    border-bottom: 1px ridge grey;
+}
+.barre{
+    display: block;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.c85{
+    width: 85%;
+    background-color: #8B8;
+}
+.c90{
+    width: 40%;
+    background-color: #4B8;
+}
+.c95{
+    width: 95%;
+    background-color: #4B8;
+}
+.c100{
+    width: 70%;
+    background-color: #4B8;
+    border-radius: 5px;
+}
+.comp2{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.conteneur-barre2{
+    flex: 0 0 100%;
+    height: 0.5em;
+    margin-bottom: 0.25em;
+    border-radius: 5px;
+    background-color: grey;
+}
+
+/*SECTION INTERETS*/
+.interet{
+    flex: 0 1 50%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.interet img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px #555;
+}
+
+/*VERSION BUREAU DU CV*/
+@media screen and (min-width: 980px){
+    section{
+        width: 80%;
+        box-shadow: 0px 0px 10px #bbb;
+    }
+    a:hover{
+        color: #EA0;
+    }
+    header h1{
+        width: 80%;
+    }
+    .prez, .contact{
+        flex: 0 0 45%;
+    }
+    .prez{
+        border-bottom: none;
+        border-right: 2px solid #ccc;
+        padding-right: 20px;
+        margin-left: auto;
+    }
+    .contact{
+        padding-left: 20px;
+        margin-right: auto;
+    }
+    .prez a{
+        border: 2px solid transparent;
+    }
+    .prez a:hover{
+        color: #f28835;
+        background-color: #fff;
+        border: 2px solid #f28835;
+        box-shadow: 0px 0px 20px #666;
+    }
+    .exp-logo{
+        flex: 0 0 10%;
+    }
+    .exp-info, .exp-desc{
+        flex: 0 0 85%;
+        margin-left: auto;
+    }
+    .interet{
+        flex: 0 1 25%;
+    }
+}
+/* fin cv */
+
+@media screen and (max-width:780px) {
+    .navbar__links {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        width: 0;
+        height: calc(100vh - 65px);
+        position: absolute;
+        top: 65px;
+        right: 0;
+        background: var(--navbar-bg-color);
+        transform: translateX(110%);
+        transition: all .5s ease-in-out;
+        z-index: 20;
+    }
+
+    .show-nav .navbar__links {
+
+        width: 100vw;
+        transform: translateX(0);
+    }
+
+    .navbar__link {
+        transform: translateX(101%);
+        transition: all .5s ease-in-out;
+    }
+
+    .show-nav .navbar__link {
+        transform: translateX(0);
+    }
+
+    .navbar__link>a {
+        display: block;
+        padding: 1rem;
+        font-size: 1.6rem;
+        color: var(--navbar-color);
+        transition: all .4s ease-in-out;
+    }
+
+    .navbar__link>a:hover {
+        padding-left: 2rem;
+        letter-spacing: 5px;
+    }
+
+    /* Toggle menu */
+    .burger {
+        display: block;
+        position: relative;
+        padding: 0;
+        width: 45px;
+        height: 45px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .bar {
+        display: block;
+        width: 45px;
+        height: 4px;
+        border-radius: 3px;
+        background: var(--navbar-color);
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before,
+    .bar::after {
+        content: "";
+        width: 45px;
+        height: 4px;
+        position: absolute;
+        left: 0;
+        background: var(--navbar-color);
+        border-radius: 3px;
+        transition: all .5s ease-in-out;
+    }
+
+    .bar::before {
+        transform: translateY(-12px)
+    }
+
+    .bar::after {
+        transform: translateY(12px)
+    }
+
+    .show-nav .bar {
+        width: 0;
+        background: transparent;
+    }
+
+    .show-nav .bar::before {
+        transform: rotate(45deg);
+    }
+
+    .show-nav .bar::after {
+        transform: rotate(-45deg);
+    }
+
+    /* Bonus - Animations */
+    .show-nav .first {
+        transition: all 1s ease-out;
+    }
+
+    .show-nav .second {
+        transition: all 1.1s ease-out;
+    }
+
+    .show-nav .third {
+        transition: all 1.2s ease-out;
+    }
+
+    .show-nav .four {
+        transition: all 1.3s ease-out;
+    }
+
+    .show-nav .fifth {
+        transition: all 1.4s ease-out;
+    }
+
+    img {
+        display: none;
+    }
+}
+
+/*  Medium device - Bonus */
+@media screen and (min-width:768px) {
+    .navbar__link>a::after {
+        display: block;
+        content: "";
+        width: 0;
+        height: 1px;
+        background: var(--navbar-color);
+        transition: width .4s;
+    }
+
+    .navbar__link:hover>a::after {
+        width: 100%;
+    }
+}
+
+/* bonus */
+.main-content,
+#section2 {
+    height: 100vh;
+}

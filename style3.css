@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+/* Variables */
+:root {
+  --font-size:1rem;
+}
+.light-mode {
+  --navbar-color: #222;
+  --navbar-bg-color: #F0F0F0;  
+}
+.dark-mode {
+  --navbar-color: #FFF;
+  --navbar-bg-color: #000;  
+}
+
+/* Reset */
+* {
+  box-sizing:border-box; 
+  outline:none;
+  margin:0;
+  padding:0;
+}
+ul {
+  list-style:none;
+}
+
+/* Basic style */
+body {
+  height: 100vh;
+  width: 100vw;
+  margin:0;
+  font-size:var(--font-size);
+  font-family: 'Poppins', sans-serif;
+  background-color:white;
+  overflow: hidden;
+}
+p {
+  text-align: center;
+  /* width: 500px; */
+}
+h1 {
+  text-align: center;
+  background: linear-gradient(134deg, #837B7B 0%, rgba(255, 248, 248, 0.00) 100%);
+
+}
+main {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  background-image: url(fond-noir-blanc-ondule.jpg);
+  background-size: cover;
+  color: #FFF;
+}
+form {
+  border: 2px solid whitesmoke;
+  padding: 50px 25px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(15px); /* assure la compatibilité avec safari */
+  backdrop-filter: blur(15px);
+  background-color: rgba(182, 182, 182, 0.2);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+label {
+  font-size: 2rem;
+  font-weight: bold;
+}
+#nom, #prenom, #email{
+  height: 30px;
+  margin-bottom: 10px;
+  padding: 5px;
+  /* font-family: 'Poppins', sans-serif; */
+  border-radius: 10px;
+}
+#message {
+  height: 100px;
+  text-align: left;
+  padding: 5px;
+  border-radius: 10px;
+}
+#btn {
+  padding: 10px;
+  border-radius: 10px;
+  font-size: larger;
+  border-style: none;box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+#btn:hover{
+  background-color: black;
+  color: whitesmoke;
+}
+header {
+  height: 6.5%;
+}
+/* footer */
+footer{
+  height: 10%;
+  text-align: center;
+  color: white;
+  background-color: #000;
+  font-size: 1vh;
+  letter-spacing: 1px;
+  display: flex;
+}
+h2 {
+  text-decoration : underline;
+  text-decoration-thickness: 0.01em;
+  text-underline-offset: 2px;
+}
+.footer__content{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+}
+/* Ajoutez cette règle pour supprimer le soulignement des liens dans le footer */
+footer a {
+  text-decoration: none;
+  color: white;
+}
+footer a:hover{
+  text-decoration: none;
+  color: rgb(233, 137, 41);
+}
+/* Navbar */
+.navbar {  
+  display:flex;
+  align-items:center; 
+  justify-content:space-between;   
+  padding:10px;
+  font-size:1.1rem;
+  background:var(--navbar-bg-color);
+  color:var(--navbar-color);
+  border-bottom: #F0F0F0 1px solid;
+  height: 100%;
+}
+.navbar__links { 
+  display:flex;  
+}
+.navbar__link { 
+  padding:0 10px;
+}
+.navbar__link > a { 
+  color:var(--navbar-color);
+  text-decoration:none;
+}
+.burger {
+  display:none;
+}
+
+
+
+/*  Small device */
+@media screen and (max-width:780px) {
+  .navbar__links { 
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    width:0;
+    height:calc(100vh - 65px);  
+    position:absolute;
+    top:65px;
+    right:0;     
+    background:var(--navbar-bg-color);     
+    transform: translateX(110%);
+    transition: all .5s ease-in-out;
+    z-index: 20;
+  }
+  .show-nav .navbar__links { 
+    
+    width:100vw;    
+    transform: translateX(0);
+  } 
+  .navbar__link {    
+    transform: translateX(101%);
+    transition: all .5s ease-in-out;
+  }
+  
+  .show-nav .navbar__link  {        
+    transform: translateX(0);    
+  }   
+  .navbar__link > a {
+    display:block;
+    padding:1rem;
+    font-size:1.6rem;
+    color:var(--navbar-color);  
+    transition: all .4s ease-in-out;
+  }
+  .navbar__link > a:hover {
+    padding-left:2rem;
+    letter-spacing:5px;
+  }
+  
+  /* Toggle menu */
+  .burger {
+    display:block;
+    position:relative;
+    padding:0;
+    width:45px;
+    height:45px;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+  }
+  .bar {
+    display:block;    
+    width:45px;
+    height:4px;  
+    border-radius:3px;
+    background:var(--navbar-color); 
+    transition: all .5s ease-in-out;   
+  }
+  .bar::before, .bar::after {
+    content:"";
+    width:45px;
+    height:4px;
+    position:absolute; 
+    left:0;  
+    background:var(--navbar-color); 
+    border-radius:3px;    
+    transition: all .5s ease-in-out;
+  }
+  .bar::before {
+    transform:translateY(-12px)
+  }
+  .bar::after {
+    transform:translateY(12px)
+  }
+  .show-nav .bar {
+    width:0;
+    background:transparent;    
+  }
+  .show-nav .bar::before {
+    transform:rotate(45deg);
+  }
+  .show-nav .bar::after {
+    transform:rotate(-45deg);
+  }
+  
+  /* Bonus - Animations */
+  .show-nav .first {      
+    transition: all 1s ease-out;
+  } 
+  .show-nav .second {      
+    transition: all 1.1s ease-out;
+  } 
+  .show-nav .third {      
+    transition: all 1.2s ease-out;
+  } 
+  .show-nav .four {      
+    transition: all 1.3s ease-out;
+  } 
+  .show-nav .fifth {      
+    transition: all 1.4s ease-out;
+  }
+  img {
+    display: none;
+  }
+}
+
+/*  Medium device - Bonus */
+@media screen and (min-width:1150px) {
+  .navbar__link > a::after {
+    display:block;
+    content:"";
+    width:0;
+    height:1px;
+    background:var(--navbar-color);
+    transition:width .4s;
+  }
+  .navbar__link:hover > a::after {
+    width:100%;
+  }
+}
