@@ -40,7 +40,7 @@ h1 {
 
 }
 main {
-    height: 80vh;
+    height: 80%;
     background: linear-gradient(134deg, #837B7B 0%, rgba(255, 248, 248, 0.00) 100%);
 }
 
@@ -191,7 +191,7 @@ footer a:hover {
     font-size: 2em;
     text-align: center;
 }
-a {
+.item a {
     text-align: center;
     color: rgba(2, 2, 2, 0.55);
     text-decoration: none; /* Ajoutez cette ligne pour enlever la décoration du lien */
@@ -325,6 +325,60 @@ a {
 
     img {
         display: none;
+    }
+    h1 {
+        font-size: 1rem;
+    }
+    main p{
+        font-size: 0.5rem;
+    }
+    .carousel {
+        position: relative;
+        width: 20rem;
+        bottom: 7rem;
+        transform-style: preserve-3d;
+        /* transform: perspective(2000px) rotate3d(0,1,0, 0deg) ; */
+        transform: perspective(2000px) rotateX(-10deg) rotateY(0deg) scale(0.45);
+        transition: 2s;
+        /* animation: circular-rotate 9s linear infinite; */
+    }
+    footer {
+        height: 12%;
+        text-align: center;
+        color: white;
+        background-color: #000;
+        letter-spacing: 1px;
+    }
+    
+    .footer__content {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        color: white;
+        background-color: #000;
+        font-size: 0.7vh;
+        letter-spacing: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer__content h2 {
+        font-size: 1vh;
+    }
+    
+    .footer__content p {
+        font-size: 0.7vh;
+        letter-spacing: 1px;
+    }
+    .item a {
+        font-size: 1.5rem;
+    }
+    .item a:hover {
+        font-size: 2rem;
+        text-align: center;
+        color: rgb(0, 0, 0);
+        text-decoration: none; /* Ajoutez cette ligne pour enlever la décoration du lien */
+        font-weight: bolder;
     }
 }
 
